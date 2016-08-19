@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaPrints</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
+    <link rel='stylesheet' href='style.css' type='text/css' media='screen' />
+    <link rel='stylesheet' href='style-print.css' type='text/css' media='print' />
+</head>
+<body>
+<form id="prefs" action="#">
+    <a href="#" id="close"></a>
+    <label for="loc">
+        Location
+        <input name="loc" type="text" placeholder="Madrid, Spain"/>
+    </label>
+    <label for="color">
+        Color
+        <input name="color" type="text" placeholder="#000000"/>
+    </label>
+    <button type="submit" id="go">Go</button>
+    <a href="#" id="open">Open Prefs</a>
+</form>
+<div id="frame">
+    <div class="square left"></div>
+    <div class="square right"></div>
+    <div id="map"></div>
+</div>
+
+<footer id="tips">
+    <a href="#" id="open-tips">Open Tips</a>
+    <a href="#" id="close-tips"></a>
+    <div class="inner">
+        <h1>How to Print this Map</h1>
+        <p>To print or save this as an image, first set up the map the way you want it displayed and then press <code>Ctrl-H</code> to hide the admin interface.</p>
+        <p>You may now use an image capture, such as <a href="http://www.awesomescreenshot.com/">Awesome Screenshot</a> or simply <strong>Print Screen</strong> (using <code>Ctrl-Alt-PrtScr</code> to grab the current window -- for best results, make your browser full screen).</p>
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script type='text/javascript' src='functions.js'></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=MaPrints.init"></script><~-- key=AIzaSyCYNs_LYonQDdZEWobf4yGHyQ5Bt-FLiUY& -->
+</html>
